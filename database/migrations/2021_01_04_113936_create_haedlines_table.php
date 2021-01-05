@@ -13,7 +13,7 @@ class CreateHeadlinesTable extends Migration
      */
     public function up()
     {
-        Schema::create('headlines', function (Blueprint $table) {
+        Schema::create('Headlines', function (Blueprint $table) {
             $table->id();
             $table->string("title");
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateHeadlinesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('headlines');
+        Schema::dropIfExists('Headlines');
     }
 }
