@@ -11,6 +11,7 @@ Route::get('/remove/{id}',[MainController::class,"remove"]);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
 Route::get('/lotto/', function () {
     $lucky_number = rand(1, 49);
     $numbers = array();

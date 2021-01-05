@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
-
+$user = Auth::user();
 use Illuminate\Http\Request;
 use App\Models\Headlines;
 
@@ -22,7 +22,8 @@ class MainController extends Controller
     }
 
     function logout() {
-    	Auth::logout();
+        Auth::logout();
+        session()->forget('username');
         return redirect("/");
     }
 
@@ -30,5 +31,6 @@ class MainController extends Controller
         Headlines::where("id",$id)->delete();
         return redirect("/");
     }
+ 
 
 }
