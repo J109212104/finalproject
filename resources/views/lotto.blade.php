@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
     <!-- Required meta tags -->
@@ -14,6 +15,7 @@
 </style>
 </head>
 <body>
+<div class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">J109212104</a>
