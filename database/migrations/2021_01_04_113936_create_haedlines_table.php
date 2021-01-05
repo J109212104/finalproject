@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHaedlinesTable extends Migration
+class CreateHeadlinesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,6 +27,6 @@ class CreateHaedlinesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('haedlines');
+        Schema::dropIfExists('headlines');
     }
 }
