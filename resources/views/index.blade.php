@@ -56,14 +56,16 @@
 </form>
 @endauth
 <table class="table table-striped">
-  <tr><th>編號</th><th>馬路消息</th><th>時間</th>
+  <tr><th>編號</th><th>馬路消息</th><th>時間</th><th>Del</th>
   </tr>
 @foreach ($titles as $item)
   <tr>
     <td>{{ $item->id }}</td>
     <td>{{ $item->title }}</td>
     <td>{{ $item->created_at }}</td>
-  </tr>
+    <td><a href="/remove/{{$item->id}}/">刪除</a></td>
+      </tr>
+      
 @endforeach
 </table>
   </div>

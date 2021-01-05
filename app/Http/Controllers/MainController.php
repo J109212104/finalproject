@@ -13,15 +13,22 @@ class MainController extends Controller
         return view("index",compact('titles'));
     }
 
-function insert(Request $req){
+    function insert(Request $req){
     $title = $req->input('title');
     $data = new Headlines;
     $data->title =$title;
     $data->save();
     return redirect("/");
     }
+
     function logout() {
     	Auth::logout();
         return redirect("/");
     }
+
+    public function remove($id){
+        Headlines::where("id",$id)->delete();
+        return redirect("/");
+    }
+
 }
