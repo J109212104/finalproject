@@ -16,6 +16,18 @@
 </head>
 <body>
 <div class="container">
+<h4>目前使用者:
+    <?php 
+     $username = Auth::user(); 
+     if ($username == ''){
+      echo $username;
+     }else{
+      $username = Auth::user()->name;
+      echo $username;
+     }
+     
+    ?>
+    </h4>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">J109212104</a>
@@ -30,7 +42,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/lotto/">樂透</a>
         </li>
-
+        <li class="nav-item">
+        <button type="button" class="btn btn-primary" href="https://getbootstrap.com/" >  Bootstrap  </button>
+        </li>
+        <li class="nav-item">
+         <button type="button" class="btn btn-warning" href="https://laravel.com/" >  Laravel  </button>
+        </li>
         @guest
         <li class="nav-item">
           <a class="nav-link" href="/login/">登入</a>

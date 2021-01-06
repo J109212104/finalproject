@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
-$user = Auth::user();
 use Illuminate\Http\Request;
 use App\Models\Headlines;
 
